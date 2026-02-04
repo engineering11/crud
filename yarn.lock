@@ -509,6 +509,18 @@
   dependencies:
     "@cspotcode/source-map-consumer" "0.8.0"
 
+"@engineering11/error@^1.1.8":
+  version "1.1.8"
+  resolved "https://npm.pkg.github.com/download/@engineering11/error/1.1.8/ddd2166532b83d458c5ab62a6c6a85c6c7c02460#ddd2166532b83d458c5ab62a6c6a85c6c7c02460"
+  integrity sha512-nKGTR2WFzOWc9T2i0k9jVMzUaGb5nSMpf5Hb7Wzd7ciAvJ/m+qdq/LUWA5b52V13ERyi+AbRXHw68tbL2iwXjw==
+  dependencies:
+    "@engineering11/types" "^1.42.0"
+
+"@engineering11/types@^1.42.0":
+  version "1.42.0"
+  resolved "https://npm.pkg.github.com/download/@engineering11/types/1.42.0/8520603b4349201448a3a8baab0ebda6d5566c80#8520603b4349201448a3a8baab0ebda6d5566c80"
+  integrity sha512-2RHIxEKQy1p25dshQxBJwFJYVbZocTXW6IXv3WnNg9ZehT4j4JPeT0VeBvgZBknj7VSDJTYiMTsG5KtlX5SgZA==
+
 "@eslint/eslintrc@^0.4.0":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.3.tgz#9e42981ef035beb3dd49add17acb96e8ff6f394c"

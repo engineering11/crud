@@ -1,15 +1,16 @@
 import { BadRequestException, NotFoundException } from '@nestjs/common';
 import { ParsedRequestParams } from '@engineering11/crud-request';
 import { objKeys } from '@engineering11/crud-util';
+import { E11Error } from '@engineering11/error';
 
 import { CreateManyDto, CrudRequest, CrudRequestOptions, GetManyDefaultResponse, QueryOptions } from '../interfaces';
 
 export abstract class CrudService<T> {
-  throwBadRequestException(msg?: unknown): BadRequestException {
+  throwBadRequestException(msg?: unknown): BadRequestException | E11Error {
     throw new BadRequestException(msg);
   }
 
-  throwNotFoundException(name: string): NotFoundException {
+  throwNotFoundException(name: string): NotFoundException | E11Error {
     throw new NotFoundException(`${name} not found`);
   }
 
