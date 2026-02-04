@@ -39,12 +39,7 @@
   <a href="https://github.com/marmelab/awesome-rest#nodejs">
     <img src="https://raw.githubusercontent.com/nestjsx/crud/master/img/awesome-rest.svg?sanitize=true" alt="Awesome REST" />
   </a>
-  <a href="#individuals" alt="Sponsors on Open Collective">
-    <img src="https://opencollective.com/nestjsx/backers/badge.svg" />
-  </a>
-  <a href="#organizations" alt="Sponsors on Open Collective">
-    <img src="https://opencollective.com/nestjsx/sponsors/badge.svg" />
-  </a> 
+ 
 </div>
 
 <div align="center">
@@ -103,33 +98,9 @@ Any support is welcome. At least you can give us a star :star:
 
 ## Contributors
 
-### Code Contributors
+### Contributors
 
 This project exists thanks to all the people who contribute. [[Contribute](CODE_OF_CONDUCT.md)].
-<a href="https://github.com/nestjsx/crud/graphs/contributors"><img src="https://opencollective.com/nestjsx/contributors.svg?width=890&button=false" /></a>
-
-### Financial Contributors
-
-Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/nestjsx#backer)]
-
-#### Individuals
-
-<a href="https://opencollective.com/nestjsx#backers" target="_blank"><img src="https://opencollective.com/nestjsx/backers.svg?width=890&button=false"></a>
-
-#### Organizations
-
-Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/nestjsx#sponsor)]
-
-<a href="https://opencollective.com/nestjsx/sponsor/0/website" target="_blank"><img src="https://opencollective.com/nestjsx/sponsor/0/avatar.svg"></a>
-<a href="https://opencollective.com/nestjsx/sponsor/1/website" target="_blank"><img src="https://opencollective.com/nestjsx/sponsor/1/avatar.svg"></a>
-<a href="https://opencollective.com/nestjsx/sponsor/2/website" target="_blank"><img src="https://opencollective.com/nestjsx/sponsor/2/avatar.svg"></a>
-<a href="https://opencollective.com/nestjsx/sponsor/3/website" target="_blank"><img src="https://opencollective.com/nestjsx/sponsor/3/avatar.svg"></a>
-<a href="https://opencollective.com/nestjsx/sponsor/4/website" target="_blank"><img src="https://opencollective.com/nestjsx/sponsor/4/avatar.svg"></a>
-<a href="https://opencollective.com/nestjsx/sponsor/5/website" target="_blank"><img src="https://opencollective.com/nestjsx/sponsor/5/avatar.svg"></a>
-<a href="https://opencollective.com/nestjsx/sponsor/6/website" target="_blank"><img src="https://opencollective.com/nestjsx/sponsor/6/avatar.svg"></a>
-<a href="https://opencollective.com/nestjsx/sponsor/7/website" target="_blank"><img src="https://opencollective.com/nestjsx/sponsor/7/avatar.svg"></a>
-<a href="https://opencollective.com/nestjsx/sponsor/8/website" target="_blank"><img src="https://opencollective.com/nestjsx/sponsor/8/avatar.svg"></a>
-<a href="https://opencollective.com/nestjsx/sponsor/9/website" target="_blank"><img src="https://opencollective.com/nestjsx/sponsor/9/avatar.svg"></a>
 
 ## License
 

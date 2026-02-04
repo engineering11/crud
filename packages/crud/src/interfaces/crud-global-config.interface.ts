@@ -1,4 +1,4 @@
-import { RequestQueryBuilderOptions } from '@nestjsx/crud-request';
+import { RequestQueryBuilderOptions } from '@engineering11/crud-request';
 
 import { RoutesOptions } from './routes-options.interface';
 import { ParamsOptions } from './params-options.interface';

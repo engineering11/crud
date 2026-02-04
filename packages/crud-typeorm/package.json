@@ -1,7 +1,7 @@
 {
-  "name": "@nestjsx/crud-typeorm",
+  "name": "@engineering11/crud-typeorm",
   "description": "NestJs CRUD for RESTful APIs - TypeORM",
-  "version": "5.0.0-alpha.3",
+  "version": "1.0.0-alpha.1",
   "license": "MIT",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -13,10 +13,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nestjsx/crud.git"
+    "url": "https://github.com/engineering11/crud.git"
   },
   "bugs": {
-    "url": "https://github.com/nestjsx/crud/issues"
+    "url": "https://github.com/engineering11/crud/issues"
   },
   "keywords": [
     "typescript",
@@ -31,10 +31,6 @@
     "backend",
     "frameworks"
   ],
-  "author": {
-    "name": "Michael Yali",
-    "email": "mihon4ik@gmail.com"
-  },
   "scripts": {
     "build": "npx tsc -b"
   },

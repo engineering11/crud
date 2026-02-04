@@ -6,9 +6,5 @@
   },
   "include": ["src"],
   "exclude": ["lib"],
-  "references": [
-    { "path": "../util" },
-    { "path": "../crud-request" },
-    { "path": "../crud" }
-  ]
+  "references": [{ "path": "../crud-util" }, { "path": "../crud-request" }, { "path": "../crud" }]
 }

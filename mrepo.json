@@ -1,11 +1,11 @@
 {
   "workspace": {
     "name": "packages",
-    "scope": "nestjsx",
+    "scope": "engineering11",
     "registry": "npm",
     "packages": [
       {
-        "name": "util"
+        "name": "crud-util"
       },
       {
         "name": "crud-request"
@@ -23,8 +23,7 @@
     "defaultOptions": {
       "access": "public",
       "license": "MIT",
-      "authorName": "Michael Yali",
-      "authorEmail": "mihon4ik@gmail.com",
+
       "updateTsconfig": true,
       "subGenerators": [],
       "dependencies": []

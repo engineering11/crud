@@ -15,20 +15,20 @@
     "composite": true,
     "baseUrl": "./packages",
     "paths": {
-      "@nestjsx/crud": ["crud/src"],
-      "@nestjsx/crud-typeorm": ["crud-typeorm/src"],
-      "@nestjsx/crud-request": ["crud-request/src"],
-      "@nestjsx/util": ["util/src"],
-      "@nestjsx/crud/*": ["crud/src/*"],
-      "@nestjsx/crud-typeorm/*": ["crud-typeorm/src/*"],
-      "@nestjsx/crud-request/*": ["crud-request/src/*"],
-      "@nestjsx/util/*": ["util/src/*"]
+      "@engineering11/crud": ["crud/src"],
+      "@engineering11/crud-typeorm": ["crud-typeorm/src"],
+      "@engineering11/crud-request": ["crud-request/src"],
+      "@engineering11/crud-util": ["crud-util/src"],
+      "@engineering11/crud/*": ["crud/src/*"],
+      "@engineering11/crud-typeorm/*": ["crud-typeorm/src/*"],
+      "@engineering11/crud-request/*": ["crud-request/src/*"],
+      "@engineering11/crud-util/*": ["crud-util/src/*"]
     }
   },
   "references": [
-    { "path": "crud" },
-    { "path": "crud-typeorm" },
-    { "path": "crud-request" },
-    { "path": "util" }
+    { "path": "packages/crud" },
+    { "path": "packages/crud-typeorm" },
+    { "path": "packages/crud-request" },
+    { "path": "packages/crud-util" }
   ]
 }
