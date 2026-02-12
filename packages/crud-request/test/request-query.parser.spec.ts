@@ -442,6 +442,85 @@ describe('#request-query', () => {
         const expected = [{ field: 'bar', operator: '$eq', value: 123 }];
         expect(test.paramsFilter).toMatchObject(expected);
       });
+      it('should transform param value using transform function', () => {
+        const params = {
+          userId: 'me',
+        };
+        const mockReq = { user: { id: 'cb1751fd-7fcf-4eb5-b38e-86428b1fd88d' } };
+        const options: ParamsOptions = {
+          userId: {
+            field: 'id',
+            type: 'uuid',
+            transform: (value, req) => (value === 'me' ? req.user.id : value),
+          },
+        };
+        const test = qp.parseParams(params, options, mockReq);
+        const expected = [
+          {
+            field: 'id',
+            operator: '$eq',
+            value: 'cb1751fd-7fcf-4eb5-b38e-86428b1fd88d',
+          },
+        ];
+        expect(test.paramsFilter).toMatchObject(expected);
+      });
+      it('should pass through value when transform returns it unchanged', () => {
+        const params = {
+          userId: 'cb1751fd-7fcf-4eb5-b38e-86428b1fd88d',
+        };
+        const mockReq = { user: { id: 'other-user-id' } };
+        const options: ParamsOptions = {
+          userId: {
+            field: 'id',
+            type: 'uuid',
+            transform: (value, req) => (value === 'me' ? req.user.id : value),
+          },
+        };
+        const test = qp.parseParams(params, options, mockReq);
+        const expected = [
+          {
+            field: 'id',
+            operator: '$eq',
+            value: 'cb1751fd-7fcf-4eb5-b38e-86428b1fd88d',
+          },
+        ];
+        expect(test.paramsFilter).toMatchObject(expected);
+      });
+      it('should work without transform function', () => {
+        const params = {
+          userId: 'cb1751fd-7fcf-4eb5-b38e-86428b1fd88d',
+        };
+        const mockReq = { user: { id: 'other-user-id' } };
+        const options: ParamsOptions = {
+          userId: {
+            field: 'id',
+            type: 'uuid',
+          },
+        };
+        const test = qp.parseParams(params, options, mockReq);
+        const expected = [
+          {
+            field: 'id',
+            operator: '$eq',
+            value: 'cb1751fd-7fcf-4eb5-b38e-86428b1fd88d',
+          },
+        ];
+        expect(test.paramsFilter).toMatchObject(expected);
+      });
+      it('should validate after transform', () => {
+        const params = {
+          userId: 'me',
+        };
+        const mockReq = { user: { id: 'not-a-valid-uuid' } };
+        const options: ParamsOptions = {
+          userId: {
+            field: 'id',
+            type: 'uuid',
+            transform: (value, req) => (value === 'me' ? req.user.id : value),
+          },
+        };
+        expect(qp.parseParams.bind(qp, params, options, mockReq)).toThrowError(RequestQueryException);
+      });
     });
 
     describe('#setAuthPersist', () => {

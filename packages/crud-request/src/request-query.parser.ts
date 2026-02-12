@@ -130,14 +130,14 @@ export class RequestQueryParser implements ParsedRequestParams {
     return this;
   }
 
-  parseParams(params: any, options: ParamsOptions): this {
+  parseParams(params: any, options: ParamsOptions, req?: any): this {
     if (isObject(params)) {
       const paramNames = objKeys(params);
 
       if (hasLength(paramNames)) {
         this._params = params;
         this._paramsOptions = options;
-        this.paramsFilter = paramNames.map((name) => this.paramParser(name)).filter((filter) => filter);
+        this.paramsFilter = paramNames.map((name) => this.paramParser(name, req)).filter((filter) => filter);
       }
     }
 
@@ -301,7 +301,7 @@ export class RequestQueryParser implements ParsedRequestParams {
     return val;
   }
 
-  private paramParser(name: string): QueryFilter {
+  private paramParser(name: string, req?: any): QueryFilter {
     validateParamOption(this._paramsOptions, name);
     const option = this._paramsOptions[name];
 
@@ -310,6 +310,11 @@ export class RequestQueryParser implements ParsedRequestParams {
     }
 
     let value = this._params[name];
+
+    // Apply transform function if provided (before validation)
+    if (option.transform) {
+      value = option.transform(value, req);
+    }
 
     switch (option.type) {
       case 'number':

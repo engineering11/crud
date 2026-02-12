@@ -23,11 +23,11 @@ export class CrudRequestInterceptor extends CrudBaseInterceptor implements NestI
         parser.parseQuery(req.query);
 
         if (!isNil(ctrlOptions)) {
-          const search = this.getSearch(parser, crudOptions, action, req.params);
+          const search = this.getSearch(parser, crudOptions, action, req.params, req);
           const auth = this.getAuth(parser, crudOptions, req);
           parser.search = auth.or ? { $or: [auth.or, { $and: search }] } : { $and: [auth.filter, ...search] };
         } else {
-          parser.search = { $and: this.getSearch(parser, crudOptions, action) };
+          parser.search = { $and: this.getSearch(parser, crudOptions, action, undefined, req) };
         }
 
         req[PARSED_CRUD_REQUEST_KEY] = this.getCrudRequest(parser, crudOptions);
@@ -59,9 +59,10 @@ export class CrudRequestInterceptor extends CrudBaseInterceptor implements NestI
     crudOptions: Partial<MergedCrudOptions>,
     action: CrudActions,
     params?: any,
+    req?: any,
   ): SCondition[] {
     // params condition
-    const paramsSearch = this.getParamsSearch(parser, crudOptions, params);
+    const paramsSearch = this.getParamsSearch(parser, crudOptions, params, req);
 
     // if `CrudOptions.query.filter` is a function then return transformed query search conditions
     if (isFunction(crudOptions.query.filter)) {
@@ -115,9 +116,14 @@ export class CrudRequestInterceptor extends CrudBaseInterceptor implements NestI
     return [...paramsSearch, ...optionsFilter, ...search];
   }
 
-  getParamsSearch(parser: RequestQueryParser, crudOptions: Partial<MergedCrudOptions>, params?: any): SCondition[] {
+  getParamsSearch(
+    parser: RequestQueryParser,
+    crudOptions: Partial<MergedCrudOptions>,
+    params?: any,
+    req?: any,
+  ): SCondition[] {
     if (params) {
-      parser.parseParams(params, crudOptions.params);
+      parser.parseParams(params, crudOptions.params, req);
 
       return isArrayFull(parser.paramsFilter) ? parser.paramsFilter.map(parser.convertFilterToSearch) : [];
     }
