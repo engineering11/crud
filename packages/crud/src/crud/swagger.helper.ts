@@ -103,6 +103,7 @@ export class Swagger {
           if (oldVersion) {
             return {
               [HttpStatus.OK]: {
+                description: 'Get many base response',
                 type: swaggerModels.getMany,
               },
             };
@@ -116,15 +117,8 @@ export class Swagger {
                 }
               : {
                   description: 'Get many base response',
-                  schema: {
-                    oneOf: [
-                      { $ref: swagger.getSchemaPath(swaggerModels.getMany.name) },
-                      {
-                        type: 'array',
-                        items: { $ref: swagger.getSchemaPath(swaggerModels.get.name) },
-                      },
-                    ],
-                  },
+                  type: swaggerModels.get,
+                  isArray: true,
                 },
           };
         case 'createOneBase':
@@ -132,6 +126,7 @@ export class Swagger {
           if (oldVersion) {
             return {
               [HttpStatus.OK]: {
+                description: 'Get create one base response',
                 type: swaggerModels.create,
               },
             };
@@ -148,6 +143,7 @@ export class Swagger {
           if (oldVersion) {
             return {
               [HttpStatus.OK]: {
+                description: 'Get create many base response',
                 type: swaggerModels.create,
                 isArray: true,
               },
@@ -174,9 +170,12 @@ export class Swagger {
             return {
               [HttpStatus.OK]: routes.deleteOneBase.returnDeleted
                 ? {
+                    description: 'Delete one base response',
                     type: swaggerModels.delete,
                   }
-                : {},
+                : {
+                    description: 'Delete one base response',
+                  },
             };
           }
           return {
@@ -195,9 +194,12 @@ export class Swagger {
             return {
               [HttpStatus.OK]: routes.recoverOneBase.returnRecovered
                 ? {
-                    type: swaggerModels.delete,
+                    description: 'Recover one base response',
+                    type: swaggerModels.recover,
                   }
-                : {},
+                : {
+                    description: 'Recover one base response',
+                  },
             };
           }
           return {
@@ -217,6 +219,7 @@ export class Swagger {
           if (oldVersion) {
             return {
               [HttpStatus.OK]: {
+                description: 'Response',
                 type: dto,
               },
             };
