@@ -129,12 +129,9 @@ describe('#crud', () => {
         const response = Swagger.getResponseOk(TestController.prototype.getMany);
         const expected = {
           '200': {
-            schema: {
-              oneOf: [
-                { $ref: '#/components/schemas/GetManyTestModelResponseDto' },
-                { items: { $ref: '#/components/schemas/TestModel' }, type: 'array' },
-              ],
-            },
+            description: 'Get many base response',
+            type: TestModel,
+            isArray: true,
           },
         };
         expect(response).toMatchObject(expected);
