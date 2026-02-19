@@ -1,23 +1,20 @@
-[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine/)
-
 <div align="center">
-  <h1>:point_right:<a href="https://github.com/nestjsx/crud/issues/784">You can help NestJs CRUD
-  </a></h1>
+  <img src="https://storage.googleapis.com/engineering11-prod-100.appspot.com/assets/images/engineering11_text_logo_white.svg" alt="Engineering 11" width="200" />
 </div>
 
 <div align="center">
-  <h1>CRUD</h1>
+  <h1>Engineering 11 CRUD</h1>
 </div>
 <div align="center">
   <strong>for RESTful APIs built with NestJs</strong>
+</div>
+<div align="center">
+  <em>Fork of <a href="https://github.com/nestjsx/crud">@nestjsx/crud</a> optimized for the Engineering 11 ecosystem</em>
 </div>
 
 <br />
 
 <div align="center">
-  <a href="https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md">
-    <img src="https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg" alt="StandWithUkraine" />
-  </a>
   <a href="https://travis-ci.org/nestjsx/crud">
     <img src="https://github.com/nestjsx/crud/workflows/Tests/badge.svg" alt="Build" />
   </a>
@@ -43,19 +40,29 @@
 </div>
 
 <div align="center">
-  <sub>Built with :purple_heart: by
+  <sub>Originally built by
   <a href="https://twitter.com/MichaelYali">@MichaelYali</a> and
   <a href="https://github.com/nestjsx/crud/graphs/contributors">
     Contributors
-  </a>
-  <div align="center">
-    :star2: :eyes: :zap: :boom:
-  </div>
+  </a><br/>
+  Maintained by <a href="https://engineering11.com">Engineering 11</a>
+  </sub>
 </div>
 
 <br />
 
-We believe that everyone who's working with NestJs and building some RESTful services and especially some CRUD functionality will find `@nestjsx/crud` microframework very useful.
+This is Engineering 11's fork of the excellent `@nestjsx/crud` microframework, optimized for our ecosystem and enhanced with additional features. We believe that everyone working with NestJs and building RESTful services will find this CRUD microframework very useful.
+
+## About This Fork
+
+This repository is a maintained fork of the original [nestjsx/crud](https://github.com/nestjsx/crud) library, created to:
+
+- Ensure compatibility with the Engineering 11 ecosystem
+- Add features specific to our development needs
+- Provide ongoing maintenance and updates
+- Maintain backward compatibility with the original nestjsx/crud API
+
+All credit for the original design and implementation goes to [@MichaelYali](https://twitter.com/MichaelYali) and the [original contributors](https://github.com/nestjsx/crud/graphs/contributors).
 
 ## Features
 
@@ -81,20 +88,33 @@ We believe that everyone who's working with NestJs and building some RESTful ser
 
 ## Packages
 
-- [**@nestjsx/crud**](https://www.npmjs.com/package/@nestjsx/crud) - core package which provides `@Crud()` decorator for endpoints generation, global configuration, validation, helper decorators ([docs](https://github.com/nestjsx/crud/wiki/Controllers#description))
-- [**@nestjsx/crud-request**](https://www.npmjs.com/package/@nestjsx/crud-request) - request builder/parser package which provides `RequestQueryBuilder` class for a frontend usage and `RequestQueryParser` that is being used internally for handling and validating query/path params on a backend side ([docs](https://github.com/nestjsx/crud/wiki/Requests#frontend-usage))
-- [**@nestjsx/crud-typeorm**](https://www.npmjs.com/package/@nestjsx/crud-typeorm) - TypeORM package which provides base `TypeOrmCrudService` with methods for CRUD database operations ([docs](https://github.com/nestjsx/crud/wiki/ServiceTypeorm))
+- [**@engineering11/crud**](https://www.npmjs.com/package/@engineering11/crud) - core package which provides `@Crud()` decorator for endpoints generation, global configuration, validation, helper decorators
+- [**@engineering11/crud-request**](https://www.npmjs.com/package/@engineering11/crud-request) - request builder/parser package which provides `RequestQueryBuilder` class for frontend usage and `RequestQueryParser` for backend query/path params handling and validation
+- [**@engineering11/crud-typeorm**](https://www.npmjs.com/package/@engineering11/crud-typeorm) - TypeORM package which provides base `TypeOrmCrudService` with methods for CRUD database operations
+- [**@engineering11/crud-util**](https://www.npmjs.com/package/@engineering11/crud-util) - utility package with helper functions and shared utilities
+
+### Original nestjsx Packages
+
+This fork is based on the original nestjsx packages:
+
+- Original [@nestjsx/crud](https://www.npmjs.com/package/@nestjsx/crud) - [Documentation](https://github.com/nestjsx/crud/wiki/Controllers#description)
+- Original [@nestjsx/crud-request](https://www.npmjs.com/package/@nestjsx/crud-request) - [Documentation](https://github.com/nestjsx/crud/wiki/Requests#frontend-usage)
+- Original [@nestjsx/crud-typeorm](https://www.npmjs.com/package/@nestjsx/crud-typeorm) - [Documentation](https://github.com/nestjsx/crud/wiki/ServiceTypeorm)
 
 ## Documentation
 
-- :dart: [General Information](https://github.com/nestjsx/crud/wiki#why)
-- :video_game: [CRUD Controllers](https://github.com/nestjsx/crud/wiki/Controllers#description)
-- :horse_racing: [CRUD ORM Services](https://github.com/nestjsx/crud/wiki/Services#description)
-- :trumpet: [Handling Requests](https://github.com/nestjsx/crud/wiki/Requests#description)
+For comprehensive documentation, please refer to the original nestjsx/crud documentation:
+
+- [General Information](https://github.com/nestjsx/crud/wiki#why)
+- [CRUD Controllers](https://github.com/nestjsx/crud/wiki/Controllers#description)
+- [CRUD ORM Services](https://github.com/nestjsx/crud/wiki/Services#description)
+- [Handling Requests](https://github.com/nestjsx/crud/wiki/Requests#description)
+
+The API remains compatible with the original nestjsx/crud implementation.
 
 ## Support
 
-Any support is welcome. At least you can give us a star :star:
+This is an Engineering 11 maintained fork. For issues specific to this fork, please create an issue in this repository. For general usage questions and original functionality, please refer to the [original nestjsx/crud repository](https://github.com/nestjsx/crud).
 
 ## Contributors
 
